@@ -6,6 +6,9 @@
  * Time: 上午11:13
  */
 
+//ini_set('session.save_handler','redis');
+//ini_set('session_save_path','tcp://127.0.0.1');
+
 include '../service/registerService.php';
 include '../service/pageSkip.php';
 
@@ -17,11 +20,31 @@ $password = $_POST['password'];
 
 if ( !empty($_POST['loginBtn']) ) {
 
-
-
     if (checkUser($username, $password) == 1) {
 
-        pageSkip("../homepage.html","Login successful.");
+        Session_start();
+
+        $_SESSION['username'] = $username;
+
+        $_SESSION['password'] = $password;
+
+        echo $_SESSION['username']."<br>";
+
+        echo $_SESSION['password']."<br>";
+
+        $sessionId = session_id();
+
+        echo $sessionId."<br>";
+
+        $redis = new redis();
+
+        $redis -> connect('127.0.0.1', 6379);
+
+        echo $redis -> ping()."<br>";
+
+//        $redis -> get("PHPREDIS_SESSION:".$sessionId);
+
+        pageSkip("../homepage.php","Login successful.");
 
     } elseif(checkUser($username, $password) == -1) {
 

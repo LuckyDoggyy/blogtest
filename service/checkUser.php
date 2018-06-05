@@ -20,7 +20,7 @@ function checkUser($username, $password){
 
     $res =  $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo $res;
+//    var_dump($res);
 
     if(empty($res['password'])) {
 

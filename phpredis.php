@@ -8,4 +8,6 @@
 
 $redis = new Redis();
 $redis -> connect('127.0.0.1', 6379);
-echo "Server is running: ".$redis->ping();
+$redis->set('username','xuxyu');
+$redis->get('username');
+//echo "Server is running: ".$redis->ping();

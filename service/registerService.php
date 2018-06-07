@@ -20,11 +20,13 @@ function addUser($username, $password)
 
         $stmt = $dbh->prepare($sql);
 
+        $dbh = null;
+
         return (int)$stmt->execute(array(':username'=>$username,':password'=>$password));
 
     }else{
 
-        return -2;
+        return false;
 
     }
 

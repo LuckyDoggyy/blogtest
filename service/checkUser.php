@@ -16,11 +16,13 @@ function checkUser($username, $password){
 
     $stmt = $dbh->prepare($sql);
 
-    $stmt -> execute(array(':username'=>$username));
+    $stmt -> execute(array(':username' => $username));
 
     $res =  $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo $res;
+//    var_dump($res);
+
+    $dbh = null;
 
     if(empty($res['password'])) {
 
@@ -32,8 +34,10 @@ function checkUser($username, $password){
 
     } else {
 
-        return 1;
+        return $res['id'];
 
     }
+
+
 
 }

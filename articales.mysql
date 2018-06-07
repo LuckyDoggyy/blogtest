@@ -1,0 +1,9 @@
+use blog;
+create table articales(
+id int(10) not null auto_increment primary key,
+content text not null,
+create_time timestamp not null default current_timestamp,
+index(content(10)),
+index(create_time)
+)engine = innodb auto_increment = 1000 default charset = utf8;
+

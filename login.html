@@ -6,7 +6,7 @@
     <script src="./jquery-3.2.0.min.js"></script>
 </head>
 <body>
-<form method="post" action="controller/login.php">
+<form method="post" action="controller/loginController.php">
     <table align="center">
         <tr>
             <td>
@@ -34,63 +34,5 @@
         </tr>
     </table>
 </form>
-</body><!--
-<script>
-    //用户登录，验证用户密码
-    $('#subBtn').click(function () {
-        data = {
-            username: $('#username').val(),
-            password: $('#password').val()
-        };
-        window.alert(data.username + data.password);
-        $.ajax({
-            type: 'post',
-            url: './controller/login.php',
-            data: data,
-            dataType: "json",
-            success: function (res) {
-                // var res = $.parseJSON(result);
-                window.alert(res.username + res.password);
-                window.alert("success");
-                window.alert("Login successful. Skip to homepage.");
-                window.location.href = "/homepage.html";
-                return false;
-
-            },
-            error: function (result) {
-                window.alert(result);
-                window.alert('failed');
-                return false;
-                // console.log()
-            }
-        });
-    });
-    //用户注册，插入新用户记录
-    $('#regBtn').click(function () {
-        data = {
-            username: $('#username').val(),
-            password: $('#password').val()
-        };
-        window.alert(data.username + data.password);
-        // window.alert(username + password);
-        $.ajax({
-            type: 'post',
-            url: './controller/register.php',
-            dataType: 'json',
-            data: data,
-            success: function (res) {
-                // window.alert(res.registerRes);
-                // // window.alert(res.registerRes);
-                // return false;
-            },
-            error: function (res) {
-                // window.alert(res);
-                // window.alert('failed');
-            }
-        })
-
-    });
-
-
-</script>-->
+</body>
 </html>

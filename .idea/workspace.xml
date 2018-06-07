@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a53a7dca-8c45-4743-8677-e2f8c73c8445" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pageSkip.php" beforeDir="false" afterPath="$PROJECT_DIR$/service/pageSkip.php" afterDir="false" />
-    </list>
+    <list default="true" id="a53a7dca-8c45-4743-8677-e2f8c73c8445" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -320,7 +316,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131111000" />
+    <option name="totallyTimeSpent" value="131605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />

@@ -53,7 +53,7 @@ function articlesDisplay($contents){
     foreach($contents as $content){
 
         echo "<div id='".$content['title']."'   style='align:left;'>";
-        echo date('Y-m-d',$content['create_time'])."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+        echo date('Y-m-d',strtotime($content['create_time']))."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
         echo "<a href='/controller/articleController.php?func=articleContent&id=".$content['id']."'>".$content['title']."</a>";
         echo "<div align='left'>".$content['content']."</div>";
         echo "<div align='left'>".$content['create_time']."</div>";

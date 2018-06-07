@@ -5,22 +5,33 @@
  * Date: 18-6-4
  * Time: 下午8:37
  */
-session_start();
+/*
+$dbh = new PDO('mysql:host=127.0.0.1;dbname=blog','root','111111');
+$dbh -> setAttribute(PDO::ERRMODE,PDO::ERRMODE_EXCEPTION);
+$dbh -> exec('set names utf8');
 
-phpinfo();
+$sql = 'select * from articles';
 
-$_SESSION['username'] = 'xuxyu';
+$stmt = $dbh -> prepare($sql);
 
-$sessionId = session_id();
+$stmt -> execute();
 
-echo $sessionId;
+$result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
-/*$redis = new Redis();
-$redis -> connect('127.0.0.1', 6379);*/
-
-/*$username = $redis -> get("PHPREDIS_SESSION:".$sessionId);*/
-
-
+$dbh = null;*/
 
 
-//echo "Server is running: ".$redis->ping();
+
+$dbh = new PDO('mysql:host=127.0.0.1;dbname=blog','root','111111');
+$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$dbh -> exec('set names utf8');
+
+$sql = 'select * from articles where userid = :userid';
+
+$stmt = $dbh -> prepare($sql);
+
+$stmt -> execute(array(':userid'=> 16));
+
+echo $stmt -> fetchAll();
+
+$dbh = null;

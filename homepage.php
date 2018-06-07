@@ -27,6 +27,7 @@ $pageNum = 1;
 
 <a href="www.baidu.com">主站</a>&nbsp;&nbsp;
 <a href="homepage.php">首页</a>&nbsp;&nbsp;
+
 <a href=""></a>
 <br>
 <div id="articles" style="width:70%;align-items:left;">
